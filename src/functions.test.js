@@ -3,27 +3,55 @@
  * and returns the largest of them. Use the if-then-else
  * construct available in Javascript.
  */
-
+function max(a, b) {
+  if (a > b) {
+    return a
+  } else {
+    return b
+  }
+}
 // ...
 
 /**
  * 2) Define a function maxOfThree() that takes three
  * numbers as arguments and returns the largest of them.
  */
-
+function maxOfThree(a, b, c) {
+  return Math.max(a, b, c)
+}
 // ...
 
 /*
  * 3) Define a function sum() that takes two numbers as
  * arguments and computes the sum of those two numbers.
  */
-
+function sum(a, b) {
+  return a + b
+}
 // ...
 
 /*
  * 4) Define a function sumOfArray that calculates the sum of
  * all the numbers in an array.
+ * for each number in the array
+ * add it to the next number
+ * and take the total sum after the last number is added
  */
+
+// function sumOfArray(array) {
+//   sum = 0
+//   array.forEach(element => {
+//     sum += array
+//   })
+//   return sum
+// }
+const sumOfArray = num1 => {
+  let num2 = 0
+  for (let index = 0; index < num1.length; index++) {
+    num2 = num2 + num1[index]
+  }
+  return num2
+}
 
 // ...
 
@@ -31,6 +59,28 @@
  * 5) Write a function isVowel() that takes a character (i.e. a string of length 1)
  * and returns true if it is a vowel, false otherwise.
  */
+function isVowel(maybe) {
+  // turn problem into a boolean
+  if (
+    maybe === 'a' ||
+    maybe === 'e' ||
+    maybe === 'i' ||
+    maybe === 'o' ||
+    maybe === 'u' ||
+    maybe === 'A' ||
+    maybe === 'E' ||
+    maybe === 'I' ||
+    maybe === 'O' ||
+    maybe === 'U'
+  ) {
+    return true
+  } else {
+    return false
+  }
+
+  // filter lowercase and uppercase vowels
+  // return true or false based on conditions
+}
 
 // ...
 
@@ -42,7 +92,22 @@
  * For example, rovarspraket("this is fun") should
  * return the string "tothohisos isos fofunon".
  */
+const rovarspraket = function(text) {
+  const string = text.toLowerCase()
+  const vowels = ['a', 'e', 'i', 'o', 'u', ' ']
+  let y = ''
+  for (let i = 0; i < string.length; i++) {
+    const current = string.charAt(i)
+    if (vowels.indexOf(current) != -1) {
+      y = y + current
+    } else {
+      y = y + (current + 'o' + current)
+    }
+  }
+  return y
+}
 
+//
 // ...
 
 /**
@@ -52,6 +117,17 @@
  * string "books".
  */
 
+function reverse(str) {
+  const myString = str.split('')
+  // split the word
+  const reverseMyString = myString.reverse()
+  //then take the first word of the copy and replace it with word before
+  const combineArray = reverseMyString.join('')
+  // join the words together
+  return combineArray
+  // return the new word
+}
+
 // ...
 
 /**
@@ -60,6 +136,15 @@
  *
  * i.e. findLongestWord("book dogs") should return "book"
  */
+function findLongestWord(word) {
+  const splitWords = words.split('')
+  // split the list of words for the first word
+
+  // count how many letters are in the word
+  // repeat untill there are no more words
+}
+
+// return the longest word
 
 // ...
 
