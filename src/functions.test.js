@@ -137,9 +137,11 @@ function reverse(str) {
  * i.e. findLongestWord("book dogs") should return "book"
  */
 function findLongestWord(word) {
-  const splitWords = words.split('')
+  const splitWords = words.split(' ')
   // split the list of words for the first word
-
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index]
+  }
   // count how many letters are in the word
   // repeat untill there are no more words
 }
